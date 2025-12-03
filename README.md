@@ -2,9 +2,12 @@
 
 Sistema completo de videoconferência educacional com detecção de atenção e assistente de IA inteligente.
 
-#### Treinamento do modelo de visão computacional com deep learning.
+<img width="1000" height="667" alt="image" src="https://github.com/user-attachments/assets/b4242344-d582-43e1-ab53-6894e23943e5" />
 
-#### Técnicas ultilizadas para o processamento das imagens:
+
+### Treinamento do modelo de visão computacional com deep learning.
+
+### Técnicas ultilizadas para o processamento das imagens:
 
 - Redimensionamento de Imagens: Ajusta todas as imagens para o mesmo tamanho.
 - Normalização : Ajusta os valores dos pixels para média 0 e desvio padrão 1
@@ -22,8 +25,7 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Carregamento de Imagens com OpenCV: Lê imagem e converte de BGR para RGB
 
-#### Técnicas para o treinamento 
-
+### Técnicas para o treinamento:
 
 - Transfer Learning (Aprendizado por Transferência) :  Usar modelo pré-treinado no ImageNet paar iniciar o treinamento.
 
@@ -37,7 +39,7 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Pin Memory :  Mantém dados na memória paginada para transferência mais rápida à GPU
 
-#### Técnicas de regularização 
+### Técnicas de regularização: 
 
 - Dropout :  Durante treinamento, desliga aleatoriamente 30% dos neurônios
 
@@ -47,26 +49,23 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Class Weighting : Ajusta importância de cada classe.
 
-#### Técnicas de avaliação 
+### Técnicas de avaliação: 
 
 
 - Cross-Validation Split (via Train/Val/Test Split) : Train : 70%, Val : 15% e Test : 15%
 
 - Test-Time Augmentation (TTA) : Testa múltiplas versões de cada imagem
 
-#### Métricas ultilizadas :
+### Métricas ultilizadas :
 - Acurácia     
 - Precisão     
 - Recall       
 - F1-Score 
 
-#### Conjunto  --------   Acurácia --------  Precisão --------   Recall --------  F1-Score    
-#### Treino    --------    71.68%  --------   74.40%  --------   71.68% --------  72.47%
-#### Validação --------    60.66%  --------   64.97%  --------   60.66% --------  61.81%
-#### Teste     --------    71.94%  --------   73.34%  --------   71.94% --------  72.27%
 
+### Link do dataset ultilizado : https://universe.roboflow.com/antu-chowdhury/focus-of-attention
 
-#### Funcionalidades do sistema
+### Funcionalidades do sistema:
 
 #### Videoconferência
 - Vídeo e áudio em tempo real usando WebRTC
@@ -285,7 +284,7 @@ SQLite com as seguintes tabelas:
 
 
 
-#### Tecnologias Utilizadas
+### Tecnologias Utilizadas:
 
 #### Backend
 - FastAPI - Framework web assíncrono
