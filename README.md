@@ -5,9 +5,9 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 <img width="1000" height="667" alt="image" src="https://github.com/user-attachments/assets/b4242344-d582-43e1-ab53-6894e23943e5" />
 
 
-### Treinamento do modelo de visão computacional com deep learning.
+#### Treinamento do modelo de visão computacional com deep learning.
 
-### Técnicas ultilizadas para o processamento das imagens:
+#### Técnicas ultilizadas para o processamento das imagens:
 
 - Redimensionamento de Imagens: Ajusta todas as imagens para o mesmo tamanho.
 - Normalização : Ajusta os valores dos pixels para média 0 e desvio padrão 1
@@ -25,7 +25,8 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Carregamento de Imagens com OpenCV: Lê imagem e converte de BGR para RGB
 
-### Técnicas para o treinamento:
+#### Técnicas para o treinamento 
+
 
 - Transfer Learning (Aprendizado por Transferência) :  Usar modelo pré-treinado no ImageNet paar iniciar o treinamento.
 
@@ -39,7 +40,7 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Pin Memory :  Mantém dados na memória paginada para transferência mais rápida à GPU
 
-### Técnicas de regularização: 
+#### Técnicas de regularização 
 
 - Dropout :  Durante treinamento, desliga aleatoriamente 30% dos neurônios
 
@@ -49,21 +50,21 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 
 - Class Weighting : Ajusta importância de cada classe.
 
-### Técnicas de avaliação: 
+#### Técnicas de avaliação 
 
 
 - Cross-Validation Split (via Train/Val/Test Split) : Train : 70%, Val : 15% e Test : 15%
 
 - Test-Time Augmentation (TTA) : Testa múltiplas versões de cada imagem
 
-### Métricas ultilizadas :
+#### Métricas ultilizadas :
 - Acurácia     
 - Precisão     
 - Recall       
 - F1-Score 
 
 
-### Link do dataset ultilizado : https://universe.roboflow.com/antu-chowdhury/focus-of-attention
+#### Link do dataset ultilizado : https://universe.roboflow.com/antu-chowdhury/focus-of-attention
 
 ### Funcionalidades do sistema:
 
@@ -94,7 +95,7 @@ Sistema completo de videoconferência educacional com detecção de atenção e 
 - **Contexto independente** por sala de aula
 - **Respostas contextuais** baseadas nos materiais do professor
 
-#### Requisitos
+### Requisitos:
 
 #### Backend
 - Python 3.8+
@@ -145,9 +146,7 @@ cd frontend
 npm start
 ```
 
-O aplicativo estará disponível em: http://localhost:3000
-
-#### Como Usar
+### Como Usar : 
 
 #### Professor
 
@@ -244,9 +243,9 @@ Sala principal de videoconferência com:
 - Chat em tempo real
 - Transcrição automática
 - Dashboard de atenção (professor)
-- **AI Assistant v2 flutuante** 
+- **AI Assistant flutuante** 
 
-#### AIAssistantV2 
+#### AIAssistant
 Assistente de IA com interface flutuante:
 - Botão roxo no canto inferior direito
 - Janela expansível de chat
@@ -269,7 +268,7 @@ Context React para gerenciamento de autenticação:
 - Validação de permissões (professor vs aluno)
 - Tokens expiram após 24 horas
 
-#### Banco de Dados
+### Banco de Dados:
 
 SQLite com as seguintes tabelas:
 
@@ -281,7 +280,6 @@ SQLite com as seguintes tabelas:
 - **transcripts** - Transcrições de áudio
 - **ai_contexts** - Contextos/materiais da IA
 - **ai_conversations** - Histórico de conversas com IA
-
 
 
 ### Tecnologias Utilizadas:
@@ -307,6 +305,12 @@ SQLite com as seguintes tabelas:
 - face-api.js - Detecção facial
 - Web Speech API - Reconhecimento de voz
 
+### Arquitetura do Agente:
+
+- O sistema utiliza RAG para que a IA responda baseada nos materiais específicos da aula, não apenas em conhecimento geral. Isso garante respostas contextualizadas e precisas.
+- Suporta PDF, DOCX, TXT, MD
+- Usa loaders específicos do LangChain para cada tipo
+- Usa  a Groq API - LLM rápido (Llama 3.3 70B) para geração de respostas
 
 
 
